@@ -15,6 +15,7 @@ RUN apt install -y --no-install-recommends \
         wget \
         build-essential \
         ntp \
+        ssh \
         git \
         sudo
 
