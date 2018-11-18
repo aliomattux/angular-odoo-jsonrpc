@@ -1,0 +1,64 @@
+#!/bin/bash
+
+COMMAND=$1
+PWD=`pwd`
+
+# OS
+OS_TYPE=`uname`
+
+# Title routines
+function updateTitle() {
+    echo -ne "\033]0;$1\007"
+}
+
+function restoreTitle() {
+    echo -ne "\033]0;Terminal\007"
+}
+
+function newTerminal() {
+    if [ "$OS_TYPE" == "Linux" ]; then
+        gnome-terminal -- "$@"
+    elif [ "$OS_TYPE" == "Darwin" ]; then
+        echo "Not supported on Darwin"
+        exit 100
+    fi
+}
+
+function run_command() {
+    docker run -it --rm --name angular7-odoo-jsonrpc -v $PWD:/home/dev/angular7-odoo-jsonrpc:rw angular7-odoo-jsonrpc "$@"
+}
+
+case "$COMMAND" in
+    build-image)
+        updateTitle "Building angular7-odoo-jsonrpc"
+        docker build --pull -f dev.Dockerfile -t angular7-odoo-jsonrpc .
+        ;;
+
+    exec)
+        shift;
+        run_command "$@"
+        ;;
+
+    bash)
+        run_command bash
+        ;;
+
+    install)
+        run_command install
+        ;;
+
+    down)
+        docker rm -v angular7-odoo-jsonrpc
+        docker image rm angular7-odoo-jsonrpc
+        ;;
+
+    build-release)
+        run_command build
+        ;;
+
+    *)
+        echo "What's that?"
+        ;;
+esac
+
+exit 0

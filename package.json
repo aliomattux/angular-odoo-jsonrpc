@@ -1,38 +1,38 @@
 {
-  "name": "angular5-odoo-jsonrpc",
-  "version": "1.1.1",
-  "description": "Odoo JsonRPC Service for Angular 5",
+  "name": "angular7-odoo-jsonrpc",
+  "version": "1.0.3",
+  "description": "Odoo JsonRPC Service for Angular 7",
   "main": "odoorpc.service.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agenterp/angular5-odoo-jsonrpc"
+    "url": "https://github.com/wbison3/angular7-odoo-jsonrpc"
   },
   "keywords": [
     "odoo",
     "angular",
     "jsonrpc",
-    "angular5"
+    "angular7"
   ],
-  "author": "Robert Gauto <robert.gauto@gmail.com>",
+  "author": "Alfredo Rodríguez <wbison3@gmail.com>",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/astronaut1712/angular2-odoo-jsonrpc/issues"
   },
   "homepage": "https://github.com/astronaut1712/angular2-odoo-jsonrpc#readme",
   "dependencies": {
-    "@angular/common": "^5.0.1",
-    "@angular/compiler": "^5.0.1",
-    "@angular/core": "^5.0.1",
-    "@angular/platform-browser": "^5.0.1",
-    "rxjs": "^5.4.0",
-    "zone.js": "^0.8.12"
+    "@angular/common": "~7.0.0",
+    "@angular/compiler": "~7.0.0",
+    "@angular/core": "~7.0.0",
+    "@angular/platform-browser": "~7.0.0",
+    "rxjs": "~6.3.3",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.7",
-    "typescript": "^2.3.4"
+    "typescript": "~3.1.1"
   }
 }

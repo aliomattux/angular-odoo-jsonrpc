@@ -1,8 +1,6 @@
 import { Injectable, Inject } from "@angular/core"
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import "rxjs/add/operator/toPromise";
-
 class Cookies { // cookies doesn't work with Android default browser / Ionic
 
     private session_id: string = null;
