@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 import { Injectable, Inject } from "@angular/core";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import "rxjs/add/operator/toPromise";
 var Cookies = /** @class */ (function () {
     function Cookies() {
         this.session_id = null;
